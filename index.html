@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +29,7 @@
             backdrop-filter: blur(10px);
             z-index: 1000;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
         }
 
         .nav-container {
@@ -69,7 +70,7 @@
             left: 0;
             width: 100%;
             background: white;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             padding: 1rem 0;
         }
 
@@ -140,8 +141,13 @@
         }
 
         @keyframes wave {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100px); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100px);
+            }
         }
 
         .hero-content {
@@ -188,12 +194,12 @@
             font-weight: bold;
             transition: all 0.3s ease;
             animation: slideInLeft 1s ease-out 0.6s both;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         }
 
         .hero-visual {
@@ -210,18 +216,39 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
         @keyframes slideInLeft {
-            from { transform: translateX(-100px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+            from {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
         @keyframes slideInRight {
-            from { transform: translateX(100px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+            from {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
         /* About Us Section */
@@ -269,7 +296,7 @@
             background: #f8fafc;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .tab-buttons {
@@ -339,7 +366,7 @@
             padding: 1.5rem;
             background: white;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease;
         }
 
@@ -366,8 +393,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Why Choose Us Section */
@@ -413,14 +447,14 @@
             padding: 2rem;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             border: 1px solid #e2e8f0;
         }
 
         .feature-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
         }
 
         .feature-icon {
@@ -475,7 +509,7 @@
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         }
 
         .service-icon {
@@ -546,7 +580,7 @@
         }
 
 
-        
+
         /* Contact Us Section */
         .contact-us {
             padding: 6rem 2rem;
@@ -586,7 +620,7 @@
             padding: 1.5rem;
             background: white;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease;
         }
 
@@ -617,7 +651,7 @@
             background: white;
             padding: 2.5rem;
             border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
         }
 
         .contact-form-container h3 {
@@ -798,6 +832,29 @@
             .services-grid {
                 grid-template-columns: 1fr;
             }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                max-width: 100%;
+                overflow: hidden;
+            }
+
+            .form-group {
+                overflow: hidden;
+            }
+
+            .about-image {
+                display: none;
+            }
+
+            .tab-container {
+                margin: 0 auto;
+            }
+
         }
 
         /* Scroll Animations */
@@ -813,6 +870,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -844,7 +902,8 @@
             <div class="hero-text">
                 <h1>Your Trusted Partner in Global Marine Solutions</h1>
                 <div class="subtitle">Reliable. Responsive. Ready to Serve.</div>
-                <p>Albha Marine Service is your end-to-end marine service provider, specializing in vessel operations, engineering, logistics, and technical solutions across international waters.</p>
+                <p>Albha Marine Service is your end-to-end marine service provider, specializing in vessel operations,
+                    engineering, logistics, and technical solutions across international waters.</p>
                 <a href="#contact" class="cta-button">Request a Quote</a>
             </div>
             <div class="hero-visual">
@@ -874,18 +933,28 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="who-we-are">
                                 <h3>Who We Are</h3>
-                                <p>Albha Marine Service was founded with the goal of providing high-quality, timely, and cost-effective marine services to clients worldwide. Backed by experienced professionals and cutting-edge technology, we bring robust solutions to meet your maritime needs.</p>
-                                <p>Our commitment to excellence and innovation has established us as a trusted partner in the marine industry, serving clients across various sectors with dedication and expertise.</p>
+                                <p>Albha Marine Service was founded with the goal of providing high-quality, timely, and
+                                    cost-effective marine services to clients worldwide. Backed by experienced
+                                    professionals and cutting-edge technology, we bring robust solutions to meet your
+                                    maritime needs.</p>
+                                <p>Our commitment to excellence and innovation has established us as a trusted partner
+                                    in the marine industry, serving clients across various sectors with dedication and
+                                    expertise.</p>
                             </div>
                             <div class="tab-pane" id="mission">
                                 <h3>Our Mission</h3>
-                                <p>To deliver marine services that set industry benchmarks in safety, sustainability, and operational excellence.</p>
-                                <p>We strive to exceed expectations through continuous improvement, innovative solutions, and unwavering commitment to our clients' success in every project we undertake.</p>
+                                <p>To deliver marine services that set industry benchmarks in safety, sustainability,
+                                    and operational excellence.</p>
+                                <p>We strive to exceed expectations through continuous improvement, innovative
+                                    solutions, and unwavering commitment to our clients' success in every project we
+                                    undertake.</p>
                             </div>
                             <div class="tab-pane" id="vision">
                                 <h3>Our Vision</h3>
-                                <p>To be a global leader in integrated marine service delivery by consistently exceeding client expectations.</p>
-                                <p>We envision a future where our comprehensive marine solutions drive industry transformation and set new standards for excellence worldwide.</p>
+                                <p>To be a global leader in integrated marine service delivery by consistently exceeding
+                                    client expectations.</p>
+                                <p>We envision a future where our comprehensive marine solutions drive industry
+                                    transformation and set new standards for excellence worldwide.</p>
                             </div>
                             <div class="tab-pane" id="values">
                                 <h3>Our Core Values</h3>
@@ -934,28 +1003,32 @@
                         <i class="fas fa-award"></i>
                     </div>
                     <h3>Decades of Combined Marine Expertise</h3>
-                    <p>Our team brings together decades of experience across all aspects of marine operations and engineering.</p>
+                    <p>Our team brings together decades of experience across all aspects of marine operations and
+                        engineering.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">
                         <i class="fas fa-certificate"></i>
                     </div>
                     <h3>Certified & Compliant with Global Standards</h3>
-                    <p>We maintain the highest industry certifications and comply with international maritime regulations.</p>
+                    <p>We maintain the highest industry certifications and comply with international maritime
+                        regulations.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">
                         <i class="fas fa-clock"></i>
                     </div>
                     <h3>24/7 Operational Support</h3>
-                    <p>Round-the-clock support ensures your operations never miss a beat, wherever you are in the world.</p>
+                    <p>Round-the-clock support ensures your operations never miss a beat, wherever you are in the world.
+                    </p>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">
                         <i class="fas fa-project-diagram"></i>
                     </div>
                     <h3>Turnkey Marine Project Management</h3>
-                    <p>Complete project management from conception to completion, handling every detail professionally.</p>
+                    <p>Complete project management from conception to completion, handling every detail professionally.
+                    </p>
                 </div>
             </div>
         </div>
@@ -971,42 +1044,50 @@
                         <i class="fas fa-cogs"></i>
                     </div>
                     <h3>Marine Engineering & Technical Services</h3>
-                    <p>We provide drydock supervision, in-voyage repairs, condition assessments, and turnkey retrofits. Our in-house engineers are equipped to manage both mechanical and structural tasks in compliance with class standards.</p>
+                    <p>We provide drydock supervision, in-voyage repairs, condition assessments, and turnkey retrofits.
+                        Our in-house engineers are equipped to manage both mechanical and structural tasks in compliance
+                        with class standards.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-ship"></i>
                     </div>
                     <h3>Vessel Operations & Support</h3>
-                    <p>From crew management to logistics, voyage planning to onboard inspections, we ensure vessels remain compliant and mission-ready at all times.</p>
+                    <p>From crew management to logistics, voyage planning to onboard inspections, we ensure vessels
+                        remain compliant and mission-ready at all times.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-anchor"></i>
                     </div>
                     <h3>Ship Chartering & Brokerage</h3>
-                    <p>Offering a fleet of offshore support vessels (OSVs), tugs, barges, and supply ships. We also manage sales and purchases of vessels, acting as reliable intermediaries in complex negotiations.</p>
+                    <p>Offering a fleet of offshore support vessels (OSVs), tugs, barges, and supply ships. We also
+                        manage sales and purchases of vessels, acting as reliable intermediaries in complex
+                        negotiations.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-tint"></i>
                     </div>
                     <h3>Tank Cleaning & Sanitation</h3>
-                    <p>We provide tank cleaning services for oil, water, and ballast tanks using automated or manual methods—ensuring environmental compliance and safety.</p>
+                    <p>We provide tank cleaning services for oil, water, and ballast tanks using automated or manual
+                        methods—ensuring environmental compliance and safety.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-warehouse"></i>
                     </div>
                     <h3>Marine Logistics & Warehousing</h3>
-                    <p>Strategically located shore-based storage facilities to support seamless loading, spares management, and consolidated cargo operations.</p>
+                    <p>Strategically located shore-based storage facilities to support seamless loading, spares
+                        management, and consolidated cargo operations.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-tools"></i>
                     </div>
                     <h3>Equipment Rental & Maintenance</h3>
-                    <p>Access a comprehensive catalog of marine equipment—cranes, compressors, hoses, and firefighting tools—with full inspection and maintenance included.</p>
+                    <p>Access a comprehensive catalog of marine equipment—cranes, compressors, hoses, and firefighting
+                        tools—with full inspection and maintenance included.</p>
                 </div>
             </div>
         </div>
@@ -1019,13 +1100,16 @@
             <div class="capabilities-content">
                 <div class="capabilities-text fade-in">
                     <h3>Technical Expertise</h3>
-                    <p>Our team includes naval architects, marine engineers, electricians, welders, and surveyors with global certifications and extensive field experience.</p>
-                    
+                    <p>Our team includes naval architects, marine engineers, electricians, welders, and surveyors with
+                        global certifications and extensive field experience.</p>
+
                     <h3>Engineering Capabilities</h3>
-                    <p>We excel in feasibility studies, retrofit & conversion projects, IMO compliance support (BWTS, SOx scrubbers), and CAD design & 3D modeling.</p>
-                    
+                    <p>We excel in feasibility studies, retrofit & conversion projects, IMO compliance support (BWTS,
+                        SOx scrubbers), and CAD design & 3D modeling.</p>
+
                     <h3>QHSE Commitment</h3>
-                    <p>We are committed to the highest safety and environmental standards. All services follow ISO 9001, ISO 14001, and OHSAS 18001 guidelines.</p>
+                    <p>We are committed to the highest safety and environmental standards. All services follow ISO 9001,
+                        ISO 14001, and OHSAS 18001 guidelines.</p>
                 </div>
                 <div class="capabilities-visual fade-in">
                     <div class="capability-item">
@@ -1048,124 +1132,130 @@
             </div>
         </div>
     </section>
-<!-- Contact Us Section -->
-<section id="contact-us" class="contact-us">
-    <div class="container">
-        <h2 class="section-title fade-in">Contact Us</h2>
-        <div class="contact-content">
-            <div class="contact-info fade-in">
-                <h3>Get in Touch</h3>
-                <p>Ready to discuss your marine service needs? Our team of experts is here to provide you with comprehensive solutions tailored to your requirements.</p>
-                
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Global Operations</h4>
-                            <p>Serving clients worldwide with local expertise</p>
+    <!-- Contact Us Section -->
+    <section id="contact-us" class="contact-us">
+        <div class="container">
+            <h2 class="section-title fade-in">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <h3>Get in Touch</h3>
+                    <p>Ready to discuss your marine service needs? Our team of experts is here to provide you with
+                        comprehensive solutions tailored to your requirements.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Global Operations</h4>
+                                <p>Serving clients worldwide with local expertise</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+91  123-4567</p>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 123-4567</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>info@albhamarine.com</p>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@albhamarine.com</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Availability</h4>
-                            <p>24/7 Emergency Support</p>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Availability</h4>
+                                <p>24/7 Emergency Support</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="contact-form-container fade-in">
-                <h3>Request a Quote</h3>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="companyName">Company Name *</label>
-                            <input type="text" id="companyName" name="companyName" required>
+
+                <div class="contact-form-container fade-in">
+                    <h3>Request a Quote</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="companyName">Company Name *</label>
+                                <input type="text" id="companyName" name="companyName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactName">Contact Name *</label>
+                                <input type="text" id="contactName" name="contactName" required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="contactName">Contact Name *</label>
-                            <input type="text" id="contactName" name="contactName" required>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="serviceType">Service Required *</label>
+                                <select id="serviceType" name="serviceType" required>
+                                    <option value="">Select a service</option>
+                                    <option value="marine-engineering">Marine Engineering & Technical Services</option>
+                                    <option value="vessel-operations">Vessel Operations & Support</option>
+                                    <option value="ship-chartering">Ship Chartering & Brokerage</option>
+                                    <option value="tank-cleaning">Tank Cleaning & Sanitation</option>
+                                    <option value="logistics">Marine Logistics & Warehousing</option>
+                                    <option value="equipment-rental">Equipment Rental & Maintenance</option>
+                                    <option value="salvage">Salvage Operations & Emergency Response</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="vesselType">Vessel Type</label>
+                                <input type="text" id="vesselType" name="vesselType"
+                                    placeholder="e.g., Container Ship, Tanker, OSV">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="tonnage">Vessel Tonnage (if applicable)</label>
+                                <input type="text" id="tonnage" name="tonnage" placeholder="e.g., 50,000 DWT">
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Port/Region</label>
+                                <input type="text" id="location" name="location"
+                                    placeholder="e.g., Singapore, Rotterdam">
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="form-row">
+
                         <div class="form-group">
-                            <label for="serviceType">Service Required *</label>
-                            <select id="serviceType" name="serviceType" required>
-                                <option value="">Select a service</option>
-                                <option value="marine-engineering">Marine Engineering & Technical Services</option>
-                                <option value="vessel-operations">Vessel Operations & Support</option>
-                                <option value="ship-chartering">Ship Chartering & Brokerage</option>
-                                <option value="tank-cleaning">Tank Cleaning & Sanitation</option>
-                                <option value="logistics">Marine Logistics & Warehousing</option>
-                                <option value="equipment-rental">Equipment Rental & Maintenance</option>
-                                <option value="salvage">Salvage Operations & Emergency Response</option>
-                                <option value="other">Other</option>
-                            </select>
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" name="message" rows="5"
+                                placeholder="Please provide details about your requirements, timeline, and any specific needs..."
+                                required></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="vesselType">Vessel Type</label>
-                            <input type="text" id="vesselType" name="vesselType" placeholder="e.g., Container Ship, Tanker, OSV">
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="tonnage">Vessel Tonnage (if applicable)</label>
-                            <input type="text" id="tonnage" name="tonnage" placeholder="e.g., 50,000 DWT">
-                        </div>
-                        <div class="form-group">
-                            <label for="location">Port/Region</label>
-                            <input type="text" id="location" name="location" placeholder="e.g., Singapore, Rotterdam">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Project Details *</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Please provide details about your requirements, timeline, and any specific needs..." required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i>
-                        Send Inquiry
-                    </button>
-                </form>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Inquiry
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>  
+    </section>
     <!-- Footer -->
     <footer id="contact" class="footer">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Albha Marine Service</h3>
-                <p>Your trusted partner in global marine solutions, delivering excellence across all maritime services.</p>
+                <p>Your trusted partner in global marine solutions, delivering excellence across all maritime services.
+                </p>
             </div>
             <div class="footer-section">
                 <h3>Services</h3>
@@ -1185,7 +1275,7 @@
             <div class="footer-section">
                 <h3>Contact Info</h3>
                 <p><i class="fas fa-envelope"></i> info@albhamarine.com</p>
-                <p><i class="fas fa-phone"></i> +91  123-4567</p>
+                <p><i class="fas fa-phone"></i> +91 123-4567</p>
                 <p><i class="fas fa-map-marker-alt"></i> Global Operations</p>
             </div>
         </div>
@@ -1202,11 +1292,11 @@
         tabButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const targetTab = button.getAttribute('data-tab');
-                
+
                 // Remove active class from all buttons and panes
                 tabButtons.forEach(btn => btn.classList.remove('active'));
                 tabPanes.forEach(pane => pane.classList.remove('active'));
-                
+
                 // Add active class to clicked button and corresponding pane
                 button.classList.add('active');
                 document.getElementById(targetTab).classList.add('active');
@@ -1289,4 +1379,5 @@
         });
     </script>
 </body>
+
 </html>
