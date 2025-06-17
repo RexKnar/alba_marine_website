@@ -529,6 +529,36 @@
             line-height: 1.6;
         }
 
+        .more-button {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+
+        /* Button styled link */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            font-family: inherit;
+            user-select: none;
+        }
+
+        .btn:hover,
+        .btn:focus {
+            background-color: #0056b3;
+            /* Darker blue on hover/focus */
+            outline: none;
+            text-decoration: none;
+        }
+
+
         /* Capabilities Section */
         .capabilities {
             padding: 6rem 2rem;
@@ -1139,6 +1169,11 @@
                     <p>Access a comprehensive catalog of marine equipment—cranes, compressors, hoses, and firefighting
                         tools—with full inspection and maintenance included.</p>
                 </div>
+            </div>
+            <div class="more-button fade-in" style="text-align: center; margin-top: 2rem;">
+                <button
+                    style="padding: 0.75rem 2rem; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    <a href="services.html" class="btn">More Services</a> </button>
             </div>
         </div>
     </section>
