@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marine Services | Albha Marine Service</title>
-  <meta name="description" content="Comprehensive marine engineering and technical services for vessels worldwide. BWTS, scrubbers, HVAC, electrical systems and more.">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-  <style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marine Services | Albha Marine Service</title>
+    <meta name="description"
+        content="Comprehensive marine engineering and technical services for vessels worldwide. BWTS, scrubbers, HVAC, electrical systems and more.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -26,7 +24,7 @@
             overflow-x: hidden;
             background-color: #f8fafc;
         }
-        
+
         /* Header Styles */
         .header {
             position: fixed;
@@ -140,7 +138,7 @@
         .nav-menu a:hover::after {
             width: 100%;
         }
-        
+
         /* Services Section */
         .services {
             padding: 8rem 2rem 6rem;
@@ -148,7 +146,7 @@
             max-width: 1400px;
             margin: 0 auto;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -174,31 +172,12 @@
             flex-direction: column;
         }
 
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+        .service-icon img {
             width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, #1e40af, #3b82f6);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-            border-color: #3b82f6;
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            color: #1e40af;
-            margin-bottom: 1.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover .service-icon {
-            transform: scale(1.1) rotate(5deg);
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
         }
 
         .service-card h3 {
@@ -234,7 +213,7 @@
             display: inline-block;
             margin: 0 auto 1rem;
         }
-        
+
         .section-title::after {
             content: '';
             position: absolute;
@@ -246,7 +225,7 @@
             background: linear-gradient(90deg, #1e40af, #3b82f6);
             border-radius: 2px;
         }
-        
+
         .section-subtitle {
             text-align: center;
             color: #64748b;
@@ -254,7 +233,7 @@
             margin: 0 auto 2rem;
             font-size: 1.1rem;
         }
-        
+
         /* Back to top button */
         .back-to-top {
             position: fixed;
@@ -275,17 +254,17 @@
             z-index: 999;
             box-shadow: 0 5px 20px rgba(30, 64, 175, 0.3);
         }
-        
+
         .back-to-top.visible {
             opacity: 1;
             visibility: visible;
         }
-        
+
         .back-to-top:hover {
             background: #3b82f6;
             transform: translateY(-5px);
         }
-        
+
         /* Footer */
         .footer {
             background: #0f172a;
@@ -308,7 +287,7 @@
             position: relative;
             padding-bottom: 0.5rem;
         }
-        
+
         .footer-section h3::after {
             content: '';
             position: absolute;
@@ -319,7 +298,8 @@
             background: #3b82f6;
         }
 
-        .footer-section a, .footer-section p {
+        .footer-section a,
+        .footer-section p {
             color: #94a3b8;
             text-decoration: none;
             display: block;
@@ -327,7 +307,7 @@
             transition: all 0.3s ease;
             line-height: 1.6;
         }
-        
+
         .footer-section i {
             width: 20px;
             margin-right: 10px;
@@ -347,13 +327,13 @@
             color: #64748b;
             font-size: 0.9rem;
         }
-        
+
         .social-links {
             display: flex;
             gap: 1rem;
             margin-top: 1.5rem;
         }
-        
+
         .social-links a {
             display: flex;
             align-items: center;
@@ -364,12 +344,12 @@
             border-radius: 50%;
             transition: all 0.3s ease;
         }
-        
+
         .social-links a:hover {
             background: #3b82f6;
             transform: translateY(-3px);
         }
-        
+
         .social-links a i {
             margin: 0;
             color: white;
@@ -381,7 +361,7 @@
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             }
         }
-        
+
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
@@ -390,15 +370,15 @@
             .mobile-menu-toggle {
                 display: block;
             }
-            
+
             .services {
                 padding: 7rem 1.5rem 4rem;
             }
-            
+
             .section-title {
                 font-size: 2rem;
             }
-            
+
             .service-card {
                 padding: 2rem;
             }
@@ -408,15 +388,15 @@
             .services-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .nav-container {
                 padding: 1rem;
             }
-            
+
             .logo {
                 font-size: 1.5rem;
             }
-            
+
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -434,10 +414,11 @@
             opacity: 1;
             transform: translateY(0);
         }
-  </style>
+    </style>
 </head>
+
 <body>
- <header class="header">
+    <header class="header">
         <nav class="nav-container">
             <a href="#" class="logo"><i class="fas fa-anchor"></i>Albha Marine</a>
             <ul class="nav-menu">
@@ -459,166 +440,184 @@
             </div>
         </nav>
     </header>
-  
-  <section id="services" class="services">
-  <div class="container">
-    <h2 class="section-title fade-in">Our Services</h2>
-    <p class="section-subtitle fade-in">Comprehensive marine engineering solutions tailored to your vessel's needs, delivered with expertise and precision.</p>
-    <div class="services-grid">
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-bolt"></i></div>
-        <h3>Electrical Projects & Services</h3>
-        <p>Wiring, panel boards, lighting systems, and electrical retrofits meeting marine electrical standards.</p>
-      </div>
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Services</h2>
+            <p class="section-subtitle fade-in">Comprehensive marine engineering solutions tailored to your vessel's
+                needs, delivered with expertise and precision.</p>
+            <div class="services-grid">
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-microchip"></i></div>
-        <h3>Automation Services</h3>
-        <p>PLC programming, control panels, and integration for automated marine systems with HMI interfaces.</p>
-      </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="./assets/images/electrical projects & services.jpg" alt="Electrical Projects">
+                    </div>
+                    <h3>Electrical Projects & Services</h3>
+                    <p>Wiring, panel boards, lighting systems, and electrical retrofits meeting marine electrical
+                        standards.</p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-bell"></i></div>
-        <h3>Alarm Monitoring System</h3>
-        <p>Advanced monitoring of onboard alarms with centralized control panels for enhanced system safety.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <img src="./assets/images/Automation Services.jfif" alt="Automation Services">
+                    </div>
+                    <h3>Automation Services</h3>
+                    <p>PLC programming, control panels, and integration for automated marine systems with HMI
+                        interfaces.</p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
-        <h3>Crane Services</h3>
-        <p>Crane supply, inspections, testing, and certification according to marine standards with load testing.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Alarm Monitoring System.jfif" alt="Alarm Monitoring System">
+                    </div>
+                    <h3>Alarm Monitoring System</h3>
+                    <p>Advanced monitoring of onboard alarms with centralized control panels for enhanced system safety.
+                    </p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-fire"></i></div>
-        <h3>Boiler Services</h3>
-        <p>Steam system repairs, pressure vessel inspection, and boiler water analysis for optimal performance.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Crane Services.jpg" alt="Crane Services"></div>
+                    <h3>Crane Services</h3>
+                    <p>Crane supply, inspections, testing, and certification according to marine standards with load
+                        testing.</p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-charging-station"></i></div>
-        <h3>Generators</h3>
-        <p>Supply, installation, overhaul, and maintenance of marine generators with load bank testing.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Boiler Services.jfif" alt="Boiler Services"></div>
+                    <h3>Boiler Services</h3>
+                    <p>Steam system repairs, pressure vessel inspection, and boiler water analysis for optimal
+                        performance.</p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-toggle-on"></i></div>
-        <h3>Switchboards</h3>
-        <p>Custom-built switchboards for power distribution and automation controls with circuit protection.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Generators.jfif" alt="Generators"></div>
+                    <h3>Generators</h3>
+                    <p>Supply, installation, overhaul, and maintenance of marine generators with load bank testing.</p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-chart-bar"></i></div>
-        <h3>Tank Level Gauging System</h3>
-        <p>Precision level monitoring for ballast, fuel, and water tanks with remote monitoring capabilities.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Switchboards.jfif" alt="Switchboards"></div>
+                    <h3>Switchboards</h3>
+                    <p>Custom-built switchboards for power distribution and automation controls with circuit protection.
+                    </p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-sliders-h"></i></div>
-        <h3>Valve Control System</h3>
-        <p>Manual and automated valve actuation for various shipboard applications with position feedback.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Tank Level Gauging System.jpg" alt="Tank Level Gauging System"></div>
+                    <h3>Tank Level Gauging System</h3>
+                    <p>Precision level monitoring for ballast, fuel, and water tanks with remote monitoring
+                        capabilities.</p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-trash"></i></div>
-        <h3>Incinerator</h3>
-        <p>Marine waste incinerator setup, servicing, and regulatory compliance support for safe operation.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Valve Control System.jfif" alt="Valve Control System"></div>
+                    <h3>Valve Control System</h3>
+                    <p>Manual and automated valve actuation for various shipboard applications with position feedback.
+                    </p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-smog"></i></div>
-        <h3>Inert Gas System</h3>
-        <p>Installation and maintenance of IGS systems to prevent explosion risks on tankers and carriers.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Incinerator.jfif" alt="Incinerator"></div>
+                    <h3>Incinerator</h3>
+                    <p>Marine waste incinerator setup, servicing, and regulatory compliance support for safe operation.
+                    </p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-ship"></i></div>
-        <h3>Main Engine Control System</h3>
-        <p>Complete engine control logic, start/stop sequences, and RPM control solutions for propulsion.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Inert Gas System.webp" alt="Inert Gas System"></div>
+                    <h3>Inert Gas System</h3>
+                    <p>Installation and maintenance of IGS systems to prevent explosion risks on tankers and carriers.
+                    </p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-        <h3>Main Engine Safety System</h3>
-        <p>Fail-safes, monitoring sensors, and shutdown systems for main engines with alarm integration.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Main Engine Control System.jpg" alt="Main Engine Control System"></div>
+                    <h3>Main Engine Control System</h3>
+                    <p>Complete engine control logic, start/stop sequences, and RPM control solutions for propulsion.
+                    </p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-shield-virus"></i></div>
-        <h3>Generator Engine Safety System</h3>
-        <p>Overload protection, auto shut-off, and alarm systems for genset safety and reliability.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Main Engine Safety System.jfif" alt="Main Engine Safety System"></div>
+                    <h3>Main Engine Safety System</h3>
+                    <p>Fail-safes, monitoring sensors, and shutdown systems for main engines with alarm integration.</p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-water"></i></div>
-        <h3>Bilge System</h3>
-        <p>Bilge pump system installation, monitoring, and automatic drain control setup with alarms.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Generator Engine Safety System.png" alt="Generator Engine Safety System"></div>
+                    <h3>Generator Engine Safety System</h3>
+                    <p>Overload protection, auto shut-off, and alarm systems for genset safety and reliability.</p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-filter"></i></div>
-        <h3>Oil Water Separator System</h3>
-        <p>Efficient bilge water separation for MARPOL-compliant discharge with monitoring systems.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Bilge System.jfif" alt="Bilge System"></div>
+                    <h3>Bilge System</h3>
+                    <p>Bilge pump system installation, monitoring, and automatic drain control setup with alarms.</p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-rocket"></i></div>
-        <h3>Propulsion System</h3>
-        <p>Shaft alignment, thrusters, CPP systems, and propulsion efficiency upgrades for vessels.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Oil Water Separator System.jpg" alt="Oil Water Separator System"></div>
+                    <h3>Oil Water Separator System</h3>
+                    <p>Efficient bilge water separation for MARPOL-compliant discharge with monitoring systems.</p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-oil-can"></i></div>
-        <h3>Oil Purifier</h3>
-        <p>Installation and maintenance of centrifugal oil separators for engine longevity and efficiency.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Propulsion System.jfif" alt="Propulsion System"></div>
+                    <h3>Propulsion System</h3>
+                    <p>Shaft alignment, thrusters, CPP systems, and propulsion efficiency upgrades for vessels.</p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-eye"></i></div>
-        <h3>Oil Mist Detector</h3>
-        <p>Crankcase vapor monitoring to detect and alert oil mist buildup risks in marine engines.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Oil Purifier.jfif" alt="Oil Purifier"></div>
+                    <h3>Oil Purifier</h3>
+                    <p>Installation and maintenance of centrifugal oil separators for engine longevity and efficiency.
+                    </p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-water"></i></div>
-        <h3>Fresh Water Generator</h3>
-        <p>Thermal and RO-based fresh water generation systems for ships with capacity planning.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Oil Mist Detector.jfif" alt="Oil Mist Detector"></div>
+                    <h3>Oil Mist Detector</h3>
+                    <p>Crankcase vapor monitoring to detect and alert oil mist buildup risks in marine engines.</p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-plug"></i></div>
-        <h3>Power Management System</h3>
-        <p>Automated load balancing, blackout protection, and generator scheduling systems.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Fresh Water Generator.jpg" alt="Fresh Water Generator"></div>
+                    <h3>Fresh Water Generator</h3>
+                    <p>Thermal and RO-based fresh water generation systems for ships with capacity planning.</p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-battery-full"></i></div>
-        <h3>Motor Starters</h3>
-        <p>Soft starters, DOL, and VFD configurations tailored for marine environments and loads.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Power Management System.jpg" alt="Power Management System"></div>
+                    <h3>Power Management System</h3>
+                    <p>Automated load balancing, blackout protection, and generator scheduling systems.</p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
-        <h3>Electrical Automation & Control System</h3>
-        <p>Complete automation panels and PLC systems for marine process control and monitoring.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Motor Starters.jpg" alt="Motor Starters"></div>
+                    <h3>Motor Starters</h3>
+                    <p>Soft starters, DOL, and VFD configurations tailored for marine environments and loads.</p>
+                </div>
 
-      <div class="service-card fade-in">
-        <div class="service-icon"><i class="fas fa-sync-alt"></i></div>
-        <h3>Motor Rewinding & Overhaul</h3>
-        <p>High-precision rewinding, vibration testing, and insulation resistance checks for motors.</p>
-      </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Electrical Automation & Control System.jpg" alt="Electrical Automation & Control System"></div>
+                    <h3>Electrical Automation & Control System</h3>
+                    <p>Complete automation panels and PLC systems for marine process control and monitoring.</p>
+                </div>
 
-    </div>
-  </div>
-</section>
-  
-  <footer id="contact" class="footer">
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Motor Rewinding & Overhaul.png" alt="Motor Rewinding & Overhaul"></div>
+                    <h3>Motor Rewinding & Overhaul</h3>
+                    <p>High-precision rewinding, vibration testing, and insulation resistance checks for motors.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Albha Marine Service</h3>
-                <p>Your trusted partner in global marine solutions, delivering excellence across all maritime services with 24/7 support worldwide.</p>
+                <p>Your trusted partner in global marine solutions, delivering excellence across all maritime services
+                    with 24/7 support worldwide.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -655,12 +654,12 @@
             <p>&copy; 2025 Albha Marine Service. All rights reserved. | ISO 9001:2015 Certified</p>
         </div>
     </footer>
-    
+
     <div class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </div>
-  
-  <script>
+
+    <script>
         // Mobile menu toggle
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const mobileMenu = document.getElementById('mobileMenu');
@@ -725,7 +724,7 @@
                 header.style.background = 'rgba(255, 255, 255, 0.95)';
                 header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
             }
-            
+
             // Back to top button
             const backToTop = document.getElementById('backToTop');
             if (window.scrollY > 300) {
@@ -734,7 +733,7 @@
                 backToTop.classList.remove('visible');
             }
         });
-        
+
         // Back to top functionality
         document.getElementById('backToTop').addEventListener('click', () => {
             window.scrollTo({
@@ -742,19 +741,7 @@
                 behavior: 'smooth'
             });
         });
-        
-        // Service card hover effects
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                const icon = card.querySelector('.service-icon');
-                icon.style.transform = 'scale(1.1) rotate(5deg)';
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                const icon = card.querySelector('.service-icon');
-                icon.style.transform = 'scale(1) rotate(0)';
-            });
-        });
     </script>
 </body>
+
 </html>
