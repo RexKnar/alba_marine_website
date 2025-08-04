@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marine Services | Albha Marine Service</title>
+    <meta name="description"
+        content="Comprehensive marine engineering and technical services for vessels worldwide. BWTS, scrubbers, HVAC, electrical systems and more.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f8fafc;
+        }
+
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #1e40af;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            font-size: 1.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #1e40af;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            background-color: #f8fafc;
+            color: #1e40af;
+            padding-left: 2.5rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-menu a:hover {
+            color: #1e40af;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: #1e40af;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 8rem 2rem 6rem;
+            background: white;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-icon img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .service-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #3b82f6;
+        }
+
+        .service-card p {
+            color: #64748b;
+            line-height: 1.6;
+            margin-top: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1e293b;
+            position: relative;
+            display: inline-block;
+            margin: 0 auto 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #1e40af, #3b82f6);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #64748b;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #1e40af;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 5px 20px rgba(30, 64, 175, 0.3);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #3b82f6;
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f172a;
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            color: #60a5fa;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #3b82f6;
+        }
+
+        .footer-section a,
+        .footer-section p {
+            color: #94a3b8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: all 0.3s ease;
+            line-height: 1.6;
+        }
+
+        .footer-section i {
+            width: 20px;
+            margin-right: 10px;
+            color: #60a5fa;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(96, 165, 250, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #3b82f6;
+            transform: translateY(-3px);
+        }
+
+        .social-links a i {
+            margin: 0;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .services {
+                padding: 7rem 1.5rem 4rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .service-card {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                padding: 1rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo"><i class="fas fa-anchor"></i>Albha Marine</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#capabilities">Capabilities</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="#about-us"><i class="fas fa-info-circle"></i> About Us</a>
+                <a href="#services"><i class="fas fa-cogs"></i> Services</a>
+                <a href="#capabilities"><i class="fas fa-tools"></i> Capabilities</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Services</h2>
+            <p class="section-subtitle fade-in">Comprehensive marine engineering solutions tailored to your vessel's
+                needs, delivered with expertise and precision.</p>
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <div class="service-icon"><img src="./assets/images/electrical projects & services.jpg" alt="Electrical Projects">
+                    </div>
+                    <h3>Electrical Projects & Services</h3>
+                    <p>Wiring, panel boards, lighting systems, and electrical retrofits meeting marine electrical
+                        standards.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <img src="./assets/images/Automation Services.jfif" alt="Automation Services">
+                    </div>
+                    <h3>Automation Services</h3>
+                    <p>PLC programming, control panels, and integration for automated marine systems with HMI
+                        interfaces.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Alarm Monitoring System.jfif" alt="Alarm Monitoring System">
+                    </div>
+                    <h3>Alarm Monitoring System</h3>
+                    <p>Advanced monitoring of onboard alarms with centralized control panels for enhanced system safety.
+                    </p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Crane Services.jpg" alt="Crane Services"></div>
+                    <h3>Crane Services</h3>
+                    <p>Crane supply, inspections, testing, and certification according to marine standards with load
+                        testing.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Boiler Services.jfif" alt="Boiler Services"></div>
+                    <h3>Boiler Services</h3>
+                    <p>Steam system repairs, pressure vessel inspection, and boiler water analysis for optimal
+                        performance.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Generators.jfif" alt="Generators"></div>
+                    <h3>Generators</h3>
+                    <p>Supply, installation, overhaul, and maintenance of marine generators with load bank testing.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Switchboards.jfif" alt="Switchboards"></div>
+                    <h3>Switchboards</h3>
+                    <p>Custom-built switchboards for power distribution and automation controls with circuit protection.
+                    </p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Tank Level Gauging System.jpg" alt="Tank Level Gauging System"></div>
+                    <h3>Tank Level Gauging System</h3>
+                    <p>Precision level monitoring for ballast, fuel, and water tanks with remote monitoring
+                        capabilities.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Valve Control System.jfif" alt="Valve Control System"></div>
+                    <h3>Valve Control System</h3>
+                    <p>Manual and automated valve actuation for various shipboard applications with position feedback.
+                    </p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Incinerator.jfif" alt="Incinerator"></div>
+                    <h3>Incinerator</h3>
+                    <p>Marine waste incinerator setup, servicing, and regulatory compliance support for safe operation.
+                    </p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Inert Gas System.webp" alt="Inert Gas System"></div>
+                    <h3>Inert Gas System</h3>
+                    <p>Installation and maintenance of IGS systems to prevent explosion risks on tankers and carriers.
+                    </p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Main Engine Control System.jpg" alt="Main Engine Control System"></div>
+                    <h3>Main Engine Control System</h3>
+                    <p>Complete engine control logic, start/stop sequences, and RPM control solutions for propulsion.
+                    </p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Main Engine Safety System.jfif" alt="Main Engine Safety System"></div>
+                    <h3>Main Engine Safety System</h3>
+                    <p>Fail-safes, monitoring sensors, and shutdown systems for main engines with alarm integration.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Generator Engine Safety System.png" alt="Generator Engine Safety System"></div>
+                    <h3>Generator Engine Safety System</h3>
+                    <p>Overload protection, auto shut-off, and alarm systems for genset safety and reliability.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Bilge System.jfif" alt="Bilge System"></div>
+                    <h3>Bilge System</h3>
+                    <p>Bilge pump system installation, monitoring, and automatic drain control setup with alarms.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Oil Water Separator System.jpg" alt="Oil Water Separator System"></div>
+                    <h3>Oil Water Separator System</h3>
+                    <p>Efficient bilge water separation for MARPOL-compliant discharge with monitoring systems.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Propulsion System.jfif" alt="Propulsion System"></div>
+                    <h3>Propulsion System</h3>
+                    <p>Shaft alignment, thrusters, CPP systems, and propulsion efficiency upgrades for vessels.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Oil Purifier.jfif" alt="Oil Purifier"></div>
+                    <h3>Oil Purifier</h3>
+                    <p>Installation and maintenance of centrifugal oil separators for engine longevity and efficiency.
+                    </p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Oil Mist Detector.jfif" alt="Oil Mist Detector"></div>
+                    <h3>Oil Mist Detector</h3>
+                    <p>Crankcase vapor monitoring to detect and alert oil mist buildup risks in marine engines.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Fresh Water Generator.jpg" alt="Fresh Water Generator"></div>
+                    <h3>Fresh Water Generator</h3>
+                    <p>Thermal and RO-based fresh water generation systems for ships with capacity planning.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Power Management System.jpg" alt="Power Management System"></div>
+                    <h3>Power Management System</h3>
+                    <p>Automated load balancing, blackout protection, and generator scheduling systems.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Motor Starters.jpg" alt="Motor Starters"></div>
+                    <h3>Motor Starters</h3>
+                    <p>Soft starters, DOL, and VFD configurations tailored for marine environments and loads.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Electrical Automation & Control System.jpg" alt="Electrical Automation & Control System"></div>
+                    <h3>Electrical Automation & Control System</h3>
+                    <p>Complete automation panels and PLC systems for marine process control and monitoring.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon"><img src="./assets/images/Motor Rewinding & Overhaul.png" alt="Motor Rewinding & Overhaul"></div>
+                    <h3>Motor Rewinding & Overhaul</h3>
+                    <p>High-precision rewinding, vibration testing, and insulation resistance checks for motors.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Albha Marine Service</h3>
+                <p>Your trusted partner in global marine solutions, delivering excellence across all maritime services
+                    with 24/7 support worldwide.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <a href="#services"><i class="fas fa-chevron-right"></i> Marine Engineering</a>
+                <a href="#services"><i class="fas fa-chevron-right"></i> Vessel Operations</a>
+                <a href="#services"><i class="fas fa-chevron-right"></i> Ship Chartering</a>
+                <a href="#services"><i class="fas fa-chevron-right"></i> Tank Cleaning</a>
+                <a href="#services"><i class="fas fa-chevron-right"></i> Logistics</a>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <a href="#about"><i class="fas fa-chevron-right"></i> About Us</a>
+                <a href="#capabilities"><i class="fas fa-chevron-right"></i> Capabilities</a>
+                <a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a>
+                <a href="#"><i class="fas fa-chevron-right"></i> Careers</a>
+                <a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-envelope"></i> info@albhamarine.com</p>
+                <p><i class="fas fa-phone"></i> +91 123-4567</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-map-marker-alt"></i> Global Operations Center</p>
+                <p><i class="fas fa-clock"></i> 24/7 Emergency Support</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Albha Marine Service. All rights reserved. | ISO 9001:2015 Certified</p>
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const icon = mobileMenuToggle.querySelector('i');
+            if (mobileMenu.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileMenuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 5px 30px rgba(0,0,0,0.15)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            }
+
+            // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Back to top functionality
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>
