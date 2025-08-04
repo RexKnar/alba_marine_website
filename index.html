@@ -19,6 +19,16 @@
             overflow-x: hidden;
         }
 
+        .flex{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .flex-wrap{
+            flex-wrap: wrap;
+        }
+
         /* Header Styles */
         .header {
             position: fixed;
@@ -201,6 +211,13 @@
             justify-content: center;
             align-items: center;
             animation: slideInRight 1s ease-out;
+        }
+        .hero-visual img{
+            width: 500px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 5%;
+            animation: float 3s ease-in-out infinite;
         }
 
         .ship-icon {
@@ -554,8 +571,8 @@
         }
 
         .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
+            /* display: grid; */
+            /* grid-template-columns: 1fr 1.2fr; */
             gap: 4rem;
             margin-top: 4rem;
             align-items: start;
@@ -848,7 +865,8 @@
                 <a href="#contact" class="cta-button">Request a Quote</a>
             </div>
             <div class="hero-visual">
-                <i class="fas fa-ship ship-icon"></i>
+                <!-- <i class="fas fa-ship ship-icon"></i> -->
+                <img src="ship1.jpeg" alt="Ship Image"/>
             </div>
         </div>
     </section>
@@ -1052,7 +1070,7 @@
 <section id="contact-us" class="contact-us">
     <div class="container">
         <h2 class="section-title fade-in">Contact Us</h2>
-        <div class="contact-content">
+        <div class="flex flex-wrap contact-content">
             <div class="contact-info fade-in">
                 <h3>Get in Touch</h3>
                 <p>Ready to discuss your marine service needs? Our team of experts is here to provide you with comprehensive solutions tailored to your requirements.</p>
